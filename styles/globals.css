@@ -4,8 +4,8 @@
 
 @layer base {
   body {
-    /* @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide; */
-    @apply bg-[#0a1116] text-[#1f2937] tracking-wide;
+    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide;
+    /* @apply bg-[#0a1116] text-[#1f2937] tracking-wide; */
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -24,7 +24,12 @@
     @apply cursor-pointer;
   }
 
-  button {
+  /* button {
     @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white
-  }
+  } */
+}
+
+:root {
+  --primary-color: rgb(35, 26, 168);
+  --secondary-color: rgb(164, 48, 48);
 }
