@@ -9,22 +9,23 @@ const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const handleNav = () => {
-    setIsOpen(prev => !prev)
+    setIsOpen((prev) => !prev)
   }
   return (
     <div className="fixed w-full h-20 shadow-xl z-[100]">
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Image
+        {/* <Image
           src="http://placekitten.com/200/200"
           alt="/"
           width="90"
           height="70"
-        />
+        /> */}
+        <p className="text-3xl ml-5 pb-1 font-bold text-gray-800">[DP]</p>
         <div>
           <ul className="hidden md:flex">
-            <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
-            </Link>
+            <li className="ml-10 text-sm uppercase hover:border-b">
+              <Link href="/a">Home</Link>
+            </li>
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b">About</li>
             </Link>
@@ -50,7 +51,9 @@ const Navbar: FC = () => {
 
       <div
         className={
-          isOpen ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''
+          isOpen
+            ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70'
+            : ''
         }
       >
         <div
