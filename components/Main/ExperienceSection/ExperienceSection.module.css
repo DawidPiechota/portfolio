@@ -1,0 +1,19 @@
+.text {
+  margin: 0px 0px 30px 4px;
+}
+
+.container {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 0px;
+}
+
+.background {
+  background: linear-gradient(#121a24, #00caff);
+  /* background: linear-gradient(#121a24, var(--navbar-color)); */
+}

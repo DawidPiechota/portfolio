@@ -1,0 +1,39 @@
+.dynamic {
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  font-size: clamp(4rem, 10vw, 10rem);
+  line-height: clamp(4rem, 10vw, 10rem);
+}
+
+.text {
+  padding: 20px 0px 20px 4px;
+  user-select: none;
+  color: var(--text);
+  text-align: center;
+}
+
+.container > * {
+  z-index: 2;
+}
+
+.container {
+  pointer-events: none;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0px;
+}
+
+/* .highlight {
+  color: var(--primary);
+} 
+
+.background {
+  z-index: 2;
+  background: rgba(0, 0, 0, .1);
+  backdrop-filter: blur(5px);
+}  */

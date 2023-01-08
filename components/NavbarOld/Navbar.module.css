@@ -1,0 +1,8 @@
+.logo {
+  color: var(--primary);
+  font-size: 1.875rem/* 30px */;
+  line-height: 2.25rem/* 36px */;
+  margin-left: 1.25rem/* 20px */;
+  padding-bottom: 0.25rem/* 4px */;
+  font-weight: 700;
+}

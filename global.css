@@ -1,0 +1,39 @@
+:root {
+  --primary: #66d9ed;
+  --navbar-color: #1a1a1c;
+  --background0: hsl(0, 0%, 93%);
+  --background1: hsl(0, 0%, 80%);
+  --background2: hsl(0, 0%, 70%);
+  /* --text: rgb(75, 85, 99); */
+  --text: white;
+  /* --header-height: 40px; */
+  --header-height: 4rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: rebeccapurple green;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
