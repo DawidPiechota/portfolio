@@ -118,7 +118,7 @@ export const renderAnimation = (canvas: HTMLCanvasElement) => {
   };
 
   document.addEventListener(
-    'pointerdown',
+    'mousedown',
     function (e) {
       Point.forceDirection = -1;
       Point.currentForceStrength = Point.convergeForceStrength;
@@ -127,7 +127,7 @@ export const renderAnimation = (canvas: HTMLCanvasElement) => {
   );
 
   document.addEventListener(
-    'pointerup',
+    'mouseup',
     function (e) {
       Point.forceDirection = 1;
       Point.currentForceStrength = Point.repellForceStrength;
