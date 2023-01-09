@@ -9,8 +9,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0px;
+  position: absolute;
+  top: 0;
   z-index: 11;
   padding: 0px 60px;
   width: 100%;
@@ -23,4 +23,42 @@
 
 .header-hidden {
   top: calc(-1 * var(--header-height));
+}
+
+.header-sticky {
+  position: fixed;
+  backdrop-filter: blur(5px);
+  background-color: var(--navbar-translucent-color);
+}
+
+.logo-and-list-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* position the logo to the left and the list items to the right */
+  width: 100%;
+}
+
+.ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.li {
+  margin: 0 1.4rem;
+}
+
+.link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.link:hover {
+  color: var(--primary);
 }

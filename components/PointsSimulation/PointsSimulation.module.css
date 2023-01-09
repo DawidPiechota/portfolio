@@ -1,9 +1,8 @@
 .canvas {
   position: absolute;
-  /* top: var(--header-height); */
-  top: 0px;
+  top: var(--header-height);
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% - var(--header-height));
   z-index: 1;
 }

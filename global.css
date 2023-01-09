@@ -1,6 +1,7 @@
 :root {
   --primary: #66d9ed;
   --navbar-color: #1a1a1c;
+  --navbar-translucent-color: rgba(26, 26, 28, 0.5);
   --background0: hsl(0, 0%, 93%);
   --background1: hsl(0, 0%, 80%);
   --background2: hsl(0, 0%, 70%);
@@ -22,6 +23,7 @@ html {
   margin: 0;
   padding: 0;
   font-size: 62.5%;
+  background-color: var(--navbar-color);
 }
 
 body {

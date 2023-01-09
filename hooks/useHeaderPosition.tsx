@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react';
 
 export enum HeaderPosition {
   STATIC = 'static',
@@ -9,62 +9,34 @@ export enum HeaderPosition {
 const useHeaderPosition = () => {
   const [headerPosition, setHeaderPosition] = useState<HeaderPosition>(
     HeaderPosition.STATIC,
-  )
+  );
 
-  const prevScrollY = useRef(0)
+  const prevScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY === 0) {
-        setHeaderPosition(HeaderPosition.STATIC)
-        console.log('static')
+      if (window.scrollY < 200) {
+        setHeaderPosition(HeaderPosition.STATIC);
       } else if (
         window.scrollY > window.innerHeight * 0.05 &&
-          prevScrollY.current - window.scrollY > 0
+        prevScrollY.current - window.scrollY > 0
       ) {
         setHeaderPosition(HeaderPosition.STICKY);
-        console.log('sticky')
       } else {
         setHeaderPosition(HeaderPosition.HIDDEN);
-        console.log('hidden')
       }
+      prevScrollY.current = window.scrollY;
+    };
 
-      // setHeaderPosition(
-      //   window.scrollY > window.innerHeight * 0.05 &&
-      //     prevScrollY.current - window.scrollY > 0
-      //     ? HeaderPosition.STICKY
-      //     : HeaderPosition.HIDDEN,
-      // );
-      // else if (
-      //   window.scrollY > window.innerHeight * 0.05 &&
-      //   prevScrollY.current - window.scrollY > 0
-      // ) {
-      //   setHeaderPosition(HeaderPosition.STICKY)
-      //   console.log('sticky')
-      //   return
-      // } else if (window.scrollY > window.innerHeight * 0.05) {
-      //   setHeaderPosition(HeaderPosition.HIDDEN)
-      //   console.log('hidden')
-      //   return
-      // }
-      // setHeaderPosition(
-      //   window.scrollY > window.innerHeight * 0.05 &&
-      //     prevScrollY.current - window.scrollY > 0
-      //     ? HeaderPosition.STATIC
-      //     : HeaderPosition.STICKY,
-      // )
-      prevScrollY.current = window.scrollY
-    }
+    handleScroll();
 
-    handleScroll()
-
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
-  return headerPosition
-}
+  return headerPosition;
+};
 
-export default useHeaderPosition
+export default useHeaderPosition;
