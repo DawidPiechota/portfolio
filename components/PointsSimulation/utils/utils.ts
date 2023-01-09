@@ -137,7 +137,7 @@ export class Point {
   }
 
   update(mouse: {x: number, y: number}, mouseOffset: number) {
-    const mouseX = mouse.x - mouseOffset;
+    const mouseX = mouse.x;// - mouseOffset;
     const mouseY = mouse.y - mouseOffset;
     const {accelerationX, accelerationY} = getAccelerationByPosition(this.pos.x, this.pos.y, mouseX, mouseY)
 

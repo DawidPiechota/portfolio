@@ -6,7 +6,11 @@ import {
 } from './utils';
 
 export const renderAnimation = (canvas: HTMLCanvasElement) => {
-  const MARGIN = 0;
+  const MARGIN = Number(
+    getComputedStyle(document.documentElement)
+      .getPropertyValue('--header-height')
+      .replace('px', ''),
+  );
   const POINTS_COUNT = Math.min(
     Math.floor((window.innerWidth * window.innerHeight) / 10_000),
     200,
@@ -14,11 +18,7 @@ export const renderAnimation = (canvas: HTMLCanvasElement) => {
   console.log(POINTS_COUNT);
 
   canvas.width = window.innerWidth;
-  canvas.height =
-    window.innerHeight -
-    +getComputedStyle(document.documentElement).getPropertyValue(
-      '--navbar-height',
-    );
+  canvas.height = window.innerHeight;
   const [cWidth, cHeight] = [canvas.width, canvas.height];
   const ctx = canvas.getContext('2d', { alpha: false });
 

@@ -7,7 +7,7 @@
   --background2: hsl(0, 0%, 70%);
   /* --text: rgb(75, 85, 99); */
   --text: white;
-  --header-height: 4rem;
+  --header-height: 40px;
 }
 
 *,
